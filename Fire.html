@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Fire-Type Pokémon">
+    <title>PokéType</title>
+    <link rel="stylesheet" href="type.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to the PokéType!</h1>
+        <p>The best place to find Pokémon by Type and Generation!</p>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Pokémon.html">Pokémon</a></li>
+            <li><a href="Generations.html">Generations</a></li>
+        </ul>
+    </nav>
+
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search Pokémon by name..." />
+    </div>
+
+    <main>
+        <p>Welcome to the best place to find Fire-Type Pokémon !</p>
+
+        <section>
+            <h2>Fire-Type Pokémon</h2>
+            <div id="pokemon-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Pokémon Fan Site. All rights reserved.</p>
+    </footer>
+
+    <script>
+        async function fetchFireTypePokemon() {
+            const fireTypePokemon = [];
+            const url = 'https://pokeapi.co/api/v2/type/fire/';
+            const response = await fetch(url);
+            const data = await response.json();
+
+            for (let i = 0; i < data.pokemon.length; i++) {
+                const pokemonEntry = data.pokemon[i];
+                const pokemonData = await fetch(pokemonEntry.pokemon.url);
+                const pokemonDetails = await pokemonData.json();
+                fireTypePokemon.push({
+                    id: pokemonDetails.id,
+                    name: pokemonEntry.pokemon.name,
+                    imageUrl: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonDetails.id}.png`,
+                });
+            }
+
+            fireTypePokemon.sort((a, b) => a.id - b.id);
+            displayPokemon(fireTypePokemon);
+
+            
+            const searchBar = document.getElementById('search-bar');
+            searchBar.addEventListener('input', () => {
+                const searchTerm = searchBar.value.toLowerCase();
+                const filteredPokemon = fireTypePokemon.filter(pokemon => 
+                    pokemon.name.toLowerCase().includes(searchTerm)
+                );
+                displayPokemon(filteredPokemon);
+            });
+        }
+
+        function displayPokemon(pokemonList) {
+            const pokemonListElement = document.getElementById('pokemon-list');
+            pokemonListElement.innerHTML = '';
+            pokemonList.forEach(pokemon => {
+                const pokemonElement = document.createElement('div');
+                pokemonElement.classList.add('pokemon');
+                pokemonElement.innerHTML = `
+                    <img src="${pokemon.imageUrl}" alt="${pokemon.name}" />
+                    <h3>#${pokemon.id} ${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h3>
+                `;
+                pokemonListElement.appendChild(pokemonElement);
+            });
+        }
+
+        fetchFireTypePokemon();
+    </script>
+</body>
+
+</html>

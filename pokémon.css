@@ -1,0 +1,249 @@
+body {
+    background-color: #F7F5E6; 
+    text-align: center;
+    color: #333333; 
+}
+
+header {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 20px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.navbar {
+    background-color: #333333; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    padding: 0 20px;
+}
+
+.navbar a {
+    color: black; 
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #FFD700; 
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px; 
+    padding: 20px;
+    background-color: #FFF8DC;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.typebar a {
+    text-align: center;
+    padding: 15px;
+    display: block; 
+    border-radius: 4px; 
+    transition: transform 0.2s; 
+    color: black;
+    text-decoration: none;
+}
+
+.typebar a:hover {
+    transform: scale(1.1); 
+}
+
+
+
+.Normal {
+    background-color: #B0C4DE; 
+}
+.Normal a:hover {
+    background-color: #A9A9A9; 
+}
+
+.Fighting {
+    background-color: #D32F2F; 
+}
+.Fighting a:hover {
+    background-color: #B71C1C; 
+}
+
+.Flying {
+    background-color: #87CEEB; 
+}
+.Flying a:hover {
+    background-color: #4682B4; 
+}
+
+.Poison {
+    background-color: #9C27B0; 
+}
+.Poison a:hover {
+    background-color: #6A1B9A; 
+}
+
+.Ground {
+    background-color: #D2B48C; 
+}
+.Ground a:hover {
+    background-color: #8B4513; 
+}
+
+.Rock {
+    background-color: #A0522D; 
+}
+.Rock a:hover {
+    background-color: #654321; 
+}
+
+.Bug {
+    background-color: #7FFF00; 
+}
+.Bug a:hover {
+    background-color: #32CD32; 
+}
+
+.Ghost {
+    background-color: #800080; 
+}
+.Ghost a:hover {
+    background-color: #4B0082; 
+}
+
+.Steel {
+	background-color: lightsteelblue;
+}
+
+.Steel a:hover {
+background-color: steelblue;
+}
+
+.Fire {
+    background-color: #FF5722; 
+}
+.Fire a:hover {
+    background-color: #E64A19; 
+}
+
+.Water {
+    background-color: #2196F3; 
+}
+.Water a:hover {
+    background-color: #0D47A1; 
+}
+
+.Grass {
+    background-color: #4CAF50; 
+}
+.Grass a:hover {
+    background-color: #388E3C; 
+}
+
+.Electric {
+    background-color: #FFEB3B; 
+}
+.Electric a:hover {
+    background-color: #FBC02D; 
+}
+
+.Psychic {
+    background-color: #E91E63; 
+}
+.Psychic a:hover {
+    background-color: #C2185B; 
+}
+
+.Ice {
+    background-color: #00BCD4; 
+}
+.Ice a:hover {
+    background-color: #00838F; 
+}
+
+.Dragon {
+    background-color: #673AB7; 
+}
+.Dragon a:hover {
+    background-color: #512DA8; 
+}
+
+.Dark {
+    background-color: darkslategray; 
+}
+.Dark a:hover {
+    background-color: slategray; 
+}
+
+.Fairy {
+    background-color: lightpink; 
+}
+.Fairy a:hover {
+    background-color: salmon; 
+}
+
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+.success-message {
+    color: green;
+    display: none;
+}
+
+.error-message {
+    color: red;
+    display: none;
+}
+
+
+footer {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}

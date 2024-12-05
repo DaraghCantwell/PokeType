@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Pokémon Types">
+    <title>Pokémon Index</title>
+    <link rel="stylesheet" href="pokémon.css">
+</head>
+<body>
+    <header>
+        <h1>Pokédex Entries By Type</h1>
+    </header>
+    <nav class="navbar"> 
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Pokémon.html">Pokémon</a></li>
+            <li><a href="Generations.html">Generations</a></li>
+        </ul>
+    </nav>
+
+<p> Odered by type to make it as convenient as possible</p>
+<ul class="typebar">
+    <li class="Normal"><a href="Normal.html">Normal </a></li>
+    <li class="Fighting"><a href="Fighting.html">Fighting </a></li>
+    <li class="Flying"><a href="Flying.html">Flying </a></li>
+    <li class="Poison"><a href="Poison.html">Poison </a></li>
+    <li class="Ground"><a href="Ground.html">Ground </a></li>
+    <li class="Rock"><a href="Rock.html">Rock </a></li>
+    <li class="Bug"><a href="Bug.html">Bug </a></li>
+    <li class="Ghost"><a href="Ghost.html">Ghost </a></li>
+    <li class="Steel"><a href="Steel.html">Steel </a></li>
+    <li class="Fire"><a href="Fire.html">Fire </a></li>
+    <li class="Water"><a href="Water.html">Water </a></li>
+    <li class="Grass"><a href="Grass.html">Grass </a></li>
+    <li class="Electric"><a href="Electric.html">Electric </a></li>
+    <li class="Psychic"><a href="Psychic.html">Psychic </a></li>
+    <li class="Ice"><a href="Ice.html">Ice </a></li>
+    <li class="Dragon"><a href="Dragon.html">Dragon </a></li>
+    <li class="Dark"><a href="Dark.html">Dark </a></li>
+    <li class="Fairy"><a href="Fairy.html">Fairy </a></li>
+</ul>
+
+
+
+<section>
+            <h2>Contact Us With Queries or Suggestions</h2>
+            <form id="contactForm" class="contact-form" onsubmit="submitForm(event)">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <div id="successMessage" class="success-message">
+                <p>Thank you for contacting us! We'll get back to you soon.</p>
+            </div>
+            <div id="errorMessage" class="error-message">
+                <p>Please fill out all fields correctly.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Pokémon Fan Site. All rights reserved.</p>
+    </footer>
+
+    <script>
+        
+        function submitForm(event) {
+            event.preventDefault(); // Prevent the form from submitting traditionally
+
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            
+            if (name && email && message) {
+            
+                document.getElementById('successMessage').style.display = 'block';
+                document.getElementById('errorMessage').style.display = 'none';
+
+                
+                document.getElementById('contactForm').reset();
+            } else {
+                
+                document.getElementById('errorMessage').style.display = 'block';
+                document.getElementById('successMessage').style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+
+<footer>
+    <p>© 2024 Pokémon Fan Site. All rights reserved.</p>
+</footer>
+</html>
