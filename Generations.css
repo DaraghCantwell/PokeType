@@ -1,0 +1,191 @@
+body {
+    background-color: #F7F5E6; 
+    text-align: center;
+    color: #333333; 
+}
+
+header {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 20px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.navbar {
+    background-color: #333333; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    padding: 0 20px;
+}
+
+.navbar a {
+    color: black; 
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #FFD700; 
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px; 
+    padding: 20px;
+    background-color: #FFF8DC;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.genbar a {
+    text-align: center;
+    padding: 15px;
+    display: block; 
+    border-radius: 4px; 
+    transition: transform 0.2s; 
+    color: black;
+    text-decoration: none;
+}
+
+.genbar a:hover {
+    transform: scale(1.1); 
+}
+
+.I {
+    background-color: red;
+}
+
+.I a:hover {
+    background-color: darkred;
+}
+
+.II {
+    background-color: gold;
+}
+
+.II a:hover {
+    background-color: darkgoldenrod;
+}
+
+.III {
+    background-color: darkgreen;
+}
+
+.III a:hover {
+    background-color: green;
+}
+
+.IV {
+    background-color: lightpink;
+}
+
+.IV a:hover {
+    background-color: deeppink;
+}
+
+.V {
+    background-color: slategray;
+}
+
+.V a:hover{
+    background-color: darkslategray;
+}
+
+.VI {
+    background-color: royalblue;
+}
+
+.VI a:hover {
+    background-color: darkblue;
+}
+
+.VII {
+    background-color: orange;
+}
+
+.VII a:hover {
+    background-color: darkorange;
+}
+
+.VIII {
+    background-color: lightsteelblue;
+}
+
+.VIII a:hover {
+    background-color: steelblue;
+}
+
+.IX {
+    background-color: darkviolet;
+}
+
+.IX a:hover {
+    background-color: purple;
+}
+
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+.success-message {
+    color: green;
+    display: none;
+}
+
+.error-message {
+    color: red;
+    display: none;
+}
+
+footer {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pokémon by Generation</title>
+	<meta name="Generations 1 to 9">
+	<link rel="stylesheet" href="Generations.css">
+</head>
+<body>
+
+
+<nav class="navbar"> 
+	<ul>
+	   <li><a href="index.html">Home </a></li>
+       <li><a href="Pokémon.html">Pokémon </a></li>
+       <li><a href="Generations.html">Generations </a></li>
+    </ul>
+</nav>
+
+<p> Odered by Generation to make it as convenient as possible</p>
+
+<ul class="genbar">
+    <li class="I"><a href="Generation-I.html">Generation I </a></li>
+    <li class="II"><a href="Generation-II.html">Generation II </a></li>
+    <li class="III"><a href="Generation-III.html">Generation III</a></li>
+    <li class="IV"><a href="Generation-IV.html">Generation IV </a></li>
+    <li class="V"><a href="Generation-V.html">Generation V </a></li>
+    <li class="VI"><a href="Generation-VI.html">Generation VI </a></li>
+    <li class="VII"><a href="Generation-VII.html">Generation VII </a></li>
+    <li class="VIII"><a href="Generation-VIII.html">Generation VIII </a></li>
+    <li class="IX"><a href="Generation-IX.html">Generation IX </a></li>
+</ul>
+
+
+
+<section>
+			<h2>Contact Us With Queries or Suggestions</h2>
+			<form id="contactForm" class="contact-form" onsubmit="submitForm(event)">
+				<label for="name">Your Name:</label>
+				<input type="text" id="name" name="name" required>
+
+				<label for="email">Your Email:</label>
+				<input type="email" id="email" name="email" required>
+
+				<label for="message">Your Message:</label>
+				<textarea id="message" name="message" rows="5" required></textarea>
+
+				<button type="submit">Submit</button>
+			</form>
+
+			<div id="successMessage" class="success-message">
+				<p>Thank you for contacting us! We'll get back to you soon.</p>
+			</div>
+			<div id="errorMessage" class="error-message">
+				<p>Please fill out all fields correctly.</p>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<p>© 2024 Pokémon Fan Site. All rights reserved.</p>
+	</footer>
+
+	<script>
+		
+		function submitForm(event) {
+			event.preventDefault(); // Prevent the form from submitting traditionally
+
+			
+			const name = document.getElementById('name').value;
+			const email = document.getElementById('email').value;
+			const message = document.getElementById('message').value;
+
+			
+			if (name && email && message) {
+			
+				document.getElementById('successMessage').style.display = 'block';
+				document.getElementById('errorMessage').style.display = 'none';
+
+				
+				document.getElementById('contactForm').reset();
+			} else {
+				
+				document.getElementById('errorMessage').style.display = 'block';
+				document.getElementById('successMessage').style.display = 'none';
+			}
+		}
+	</script>
+
+
+
+</body>
+
+<footer>
+    <p>© 2024 Pokémon Fan Site. All rights reserved.</p>
+</footer>
+</html>

@@ -1,0 +1,121 @@
+body {
+    background-color: #F7F5E6; 
+    text-align: center;
+    color: #333333; 
+}
+
+header {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 20px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.navbar {
+    background-color: #333333; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    padding: 0 20px;
+}
+
+.navbar a {
+    color: black; 
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #FFD700; 
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px; 
+    padding: 20px;
+    background-color: #FFF8DC;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    padding: 40px 20px;
+}
+
+
+.search-container {
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+#search-bar {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #FFF8DC;
+    color: #333333;
+    transition: border 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#search-bar:focus {
+    border-color: #4CAF50;
+    background-color: #ffffff;
+    outline: none;
+}
+
+
+#pokemon-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.pokemon {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+
+
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
